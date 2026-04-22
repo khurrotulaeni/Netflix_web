@@ -1,5 +1,5 @@
-import Header from "../components/layout/header";
-import Button from "../components/atoms/Button";
+import Header from "../components/layout/Header";
+import { Button } from "../components/atoms/Button";
 import { Card } from "../components/ui/Card";
 import { Collapse } from "../components/ui/Collapse";
 import SpeakerCard from "../components/ui/SpeakerCard";
