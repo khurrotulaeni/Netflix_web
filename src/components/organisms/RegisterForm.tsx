@@ -28,7 +28,7 @@ export default function RegisterForm({ onSwitch }: { onSwitch: () => void }) {
     onSwitch();
 };
     return (
-        <div className="min-h-screen w-full flex items-center justify-center bg-black">
+        <div className="min-h-screen w-full flex items-center justify-center">
             <div className="w-full max-w-lg min-height-[450px] bg-gray-900 p-10 rounded-xl shadow-lg">
                 <h1 className="text-white text-2xl font-bold mb-6 text-center">
                     Sign Up
@@ -89,16 +89,15 @@ export default function RegisterForm({ onSwitch }: { onSwitch: () => void }) {
                     <Button label="Register" variant="primary" />
                 </div>
 
-                <p className="text-white text-sm text-center mt-4">
-                    Sudah punya akun?{" "}
-                    <button
-                        type="button"
-                        onClick={onSwitch}
-                         className="text-red-500 hover:underline"
-                    >
-                    Login
-                </button>
-                </p>
+            <p className="text-sm text-center mt-4">
+            Sudah punya akun?{" "}
+            <span
+                className="text-red-500 cursor-pointer"
+                onClick={onSwitch}
+            >
+                Login
+            </span>
+            </p>
 
             </form>
         </div>

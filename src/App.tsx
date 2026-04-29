@@ -1,18 +1,32 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginForm from "./pages/LoginForm";
+import Homepage from "./pages/Homepage";
+import Arena from "./pages/Arena";
+import Academy from "./pages/Academy";
+import Spotlight from "./pages/Spotlight";
+import Studio from "./pages/Studio";
+import MainLayout from "./layout/MainLayout";
+import AuthLayout from "./layout/AuthLayout";
 import RegisterForm from "./components/organisms/RegisterForm";
 
 function App() {
-  const [mode, setMode] = useState<"login" | "register">("login");
-
   return (
-    <div className="w-full flex justify-center items-center min-h-screen">
-      {mode === "login" ? (
-        <LoginForm onSwitch={() => setMode("register")} />
-      ) : (
-        <RegisterForm onSwitch={() => setMode("login")} />
-      )}
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route element={<MainLayout />}>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/arena" element={<Arena />} />
+      <Route path="/academy" element={<Academy />} />
+      <Route path="/spotlight" element={<Spotlight />} />
+      <Route path="/studio" element={<Studio />} />
+      </Route>
+
+      <Route element={<AuthLayout />}>
+        <Route path="/login" element={<LoginForm onSwitch={() => console.log("switch")}/>} />
+        <Route path="/register" element={<RegisterForm onSwitch={() => console.log("switch")} />} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
   );
 }
 

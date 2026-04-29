@@ -10,23 +10,27 @@ export const SpeakerCard: React.FC<SpeakerCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="cursor-pointer flex flex-col items-center gap-4 group">
-      <div className="relative">
-        <img
-          src={imageUrl}
-          alt={name}
-          className="h-80 w-64 rounded-md border-2 border-red-900 mx-auto group-hover:scale-105 transition-transform duration-300 object-cover"
-        />
-      </div>
-      <div className="cursor-pointer flex flex-col items-center h-30 border-4 border-red-900 w-full  p-4 rounded-lg relative py-10 shadow-xl shadow-black/20 group-hover:shadow-2xl group-hover:shadow-black/40 transition-all duration-300">
+    <div className="cursor-pointer flex flex-col items-center gap-3 group">
+  <div className="relative">
+    <img
+      src={imageUrl}
+      alt={name}
+      className="h-[320px] w-[240px] rounded-md border border-red-800 mx-auto object-cover transition-transform duration-300 group-hover:scale-105"
+    />
+  </div>
 
-        <div className="absolute bottom-0 px-4 py-6 rounded-lg w-full h-full flex flex-col items-center gap-2 group-hover:bg-red-300  transition-all duration-300"></div>
-        <div className="absolute left-0 right-0 bottom-0 items-center justify-center p-4 flex flex-col gap-2">
-          <h3 className="text-2xl text-red-900 font-semibold">{name}</h3>
-          <p className="text-sm text-gray-600 text-center">{role}</p>
-        </div>
-      </div>
-    </div>
+  <div className="flex flex-col items-center border border-red-800 w-full max-w-xs p-4 rounded-lg transition-all duration-300 group-hover:bg-red-900/20">
+
+    <h3 className="text-lg text-white font-semibold text-center">
+      {name}
+    </h3>
+
+    <p className="text-xs text-gray-400 text-center">
+      {role}
+    </p>
+
+  </div>
+</div>
   );
 };
 
