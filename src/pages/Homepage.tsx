@@ -63,7 +63,7 @@ export default function Homepage() {
 
   return (
     <div className="w-full text-white bg-black">
-      {/* HERO SECTION */}
+
       <section
         className="relative min-h-screen flex items-center justify-center text-center px-4"
         style={{
@@ -100,7 +100,6 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* TRENDING */}
       <section id="speaker" className="py-20 text-center">
         <h2 className="text-4xl font-bold text-red-600 mb-10">
           Trending Film
@@ -118,7 +117,6 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* CARD SECTION */}
       <section className="py-20 px-4 text-center">
         <h2 className="text-4xl font-bold text-red-600 mb-10">
           More Reasons to Join
@@ -138,7 +136,6 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-20 px-4">
         <h2 className="text-4xl font-bold text-red-600 text-center mb-10">
           Frequently Asked Questions
